@@ -1,11 +1,7 @@
 package practice;
 
 public class BankAccount { // пополнение и списание происходит без комиссии
-  protected double amount; //заполненность карты
-
-  public BankAccount(double amount) {
-    this.amount = amount;
-  }
+  protected double amount = 0 ; //заполненность карты
 
   public double getAmount() {
     // верните значение количества денег не счету
@@ -14,17 +10,15 @@ public class BankAccount { // пополнение и списание прои�
 
   public void put(double amountToPut) {
     // метод зачисляет деньги на счет
-    if (amountToPut < 0) { // Если передать в метод пополнения отрицательное значение,
-      amount = amount + 0; // сумма на счёте не должна измениться.
+    if (amountToPut >= 0) {
+      amount += amountToPut;
     }
-    amount += amountToPut;
   }
 
   public void take(double amountToTake) {
     // метод списывает деньги со счета
-    if (amountToTake > amount) {// При попытке снять большую сумму, чем есть на счёте,
-      amount = amount + 0;// сумма не списывается со счёта, сумма на счёте не изменяется.
+    if (amountToTake <= amount) {
+      amount -= amountToTake;
     }
-    amount -= amountToTake;
   }
 }
