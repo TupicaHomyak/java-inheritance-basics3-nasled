@@ -1,10 +1,9 @@
 package practice;
 
 public class BankAccount { // пополнение и списание происходит без комиссии
-  protected double amount = 0 ; //заполненность карты
+  protected double amount = 0 ; //заполн. карты
 
   public double getAmount() {
-    // верните значение количества денег не счету
     return amount;
   }
 
