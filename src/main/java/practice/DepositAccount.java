@@ -1,5 +1,4 @@
 package practice;
-
 import java.time.LocalDate;
 
 public class DepositAccount extends BankAccount { //депозитный расчётный счёт
