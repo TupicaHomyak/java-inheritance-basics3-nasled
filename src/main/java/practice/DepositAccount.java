@@ -16,7 +16,7 @@ public class DepositAccount extends BankAccount { //депозитный рас�
         if (LocalDate.now().isAfter(lastIncome.plusMonths(1))) {
             super.take(amountToTake);
         } else {
-
+            getAmount();
         }
     }
 }
