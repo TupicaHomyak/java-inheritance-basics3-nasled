@@ -15,8 +15,6 @@ public class DepositAccount extends BankAccount { //депозитный рас�
         // нельзя снимать деньги в течение одного месяца после последнего пополнения
         if (LocalDate.now().isAfter(lastIncome.plusMonths(1))) {
             super.take(amountToTake);
-        } else {
-            getAmount();
         }
     }
 }
