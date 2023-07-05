@@ -1,7 +1,6 @@
 package practice;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 
 public class DepositAccount extends BankAccount { //депозитный расчётный счёт
     // нельзя снимать деньги в течение одного месяца после последнего пополнения.
